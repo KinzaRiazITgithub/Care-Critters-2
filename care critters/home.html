@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<head>
+    <title>Care Critters</title>
+	<script src="https://kit.fontawesome.com/c4254e24a8.js"
+	crossorigin="anonymous"></script>
+    <style>
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-img {
+  width: 150px; /* adjust image width */
+  height: 150px;
+  margin-left: 350px;
+}
+
+
+
+.header-title {
+	color: rgb(5, 151, 144);
+	margin-right: 450px;
+  text-align: center;
+  flex: 1;
+}
+
+
+header {
+    margin-top: 5px;
+	background-color: rgb(5, 151, 144);
+	color: #fff;
+	padding: 3.5rem;
+	text-align: center;
+}
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+nav li {
+	margin-right: 20px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	padding: 2em;
+	margin-right: 25%;
+}
+.search-box{
+	margin-top: 0%;
+	margin-left: 100%;
+	width: 300px;
+	background: rgb(5, 151, 144);
+	
+	border-radius: 5px;
+}
+.row{
+	display: flex;
+	align-items: center;
+	padding: 10px;
+
+}
+input{
+	flex: 1;
+	height: 20px;
+	background-color: transparent;
+	border: 0;
+	outline: 0;
+	font-size: 18px;
+	color: #fff;
+}
+button{
+	background: #fff;
+	border: 0;
+	outline: 0;
+	color :rgb(5, 151, 144);
+}
+button.hover{
+	cursor: pointer;
+	color: #2429270e;
+}
+button.fa-solid{
+	width: 25px;
+	color: #fff;
+	font-size: 22px;
+	cursor: pointer;
+}
+::placeholder{
+	color: #fff;
+}
+
+.TOPICS{
+	margin-left: 990px;
+	margin-top: 200px;
+	background-color: #fff;
+  width: 20%;
+  color: #333;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+a{
+	color: #333;
+}
+a:hover{
+	background-color: #048358;
+  color: #fff;
+  cursor: pointer;
+  border-color: #23527c;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+p{
+	margin-top: 20px;
+	margin-right: 20px;
+}
+.pet-menu {
+  background-color: #f7f7f7;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.pet-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pet-menu li {
+  margin-right: 20px;
+}
+
+.pet-menu a {
+  color: #666;
+  text-decoration: none;
+}
+
+.pet-menu a:hover {
+  color: #333;
+}
+
+
+.pet-menu {
+  position: absolute; /* or float: right; */
+  top: 50%; /* adjust to desired position */
+  right: 20px; /* adjust to desired position */
+  transform: translateY(-50%); /* center vertically */
+  background-color: #f7f7f7;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 200px; /* adjust to desired width */
+}
+
+
+
+
+
+
+
+
+
+
+.comments-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.comment-box {
+  background-color: #f7f7f7;
+  padding: 20px;
+  margin: 20px;
+  width: 250px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment-box img {
+  width: 250px;
+  height: 100px;
+ border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.comment-box h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.comment-box p {
+  font-size: 16px;
+  color: #666;
+}
+.bottom-bar {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  clear: both;
+}
+
+.bottom-bar .container {
+	padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bottom-bar img{
+	border-radius: 50%;
+}
+.bottom-bar p {
+  margin-bottom: 10px;
+}
+
+.bottom-bar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.bottom-bar li {
+  margin-right: 20px;
+}
+
+.bottom-bar a {
+  color: #666;
+  text-decoration: none;
+}
+
+.bottom-bar a:hover {
+  color: #333;
+}
+
+
+footer {
+	margin-top: 20px;
+	background-color: #333;
+	color: #fff;
+	padding: 1em;
+	text-align: center;
+	clear: both;
+}
+
+    </style>
+</head>
+<body> 
+	<div class="header">
+		<img src="animal logo.webp" alt="Image" class="header-img">
+		<h1 class="header-title">CARE CRITTERS</h1>
+	  </div>
+	  
+	<header>
+		<nav>
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li><a href="about us.html">About Us</a></li>
+				<li><a href="Care Tips.html">Care tips</a></li>
+				<li><a href="Veterinarian.html">Veterinarian</a></li>
+                <li><a href="Health Advices.html">Health Advices</a></li>
+                <li><a href="Buy a Pet.html"> Buy a Pet</a></li>
+                <li><a href="Training Videos.html">Training Videos</a></li>
+                <li><a href="donation.html">Donation</a></li>
+
+			</ul>
+		</nav>
+	</header>
+    <img src="pet.jpg" alt="" height="250px" width="1349px">
+   
+	<main>
+	
+		<div class="search-box">
+			<div class="row">
+				<input type="text" id="input-box" placeholder="Search anything" autocomplete="off">
+				<button><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+			</div>
+			
+		</div>
+
+
+
+
+		<p>
+            We know your pets are beloved family members, which is  why our goal is to provide them with the best care possible. Our experienced team of  professionals are passionate about providing individualized attention and compassion to  every furry friend who walks through our doors. Whether your pet needs routine check-ups, surgery or just a listening ear, we're here for you.
+			<br>As a responsible pet owner, it's important to provide your furry friend with the best possible care. This includes providing a nutritious diet, fresh water, and regular exercise. Regular veterinary check-ups are also crucial to ensuring your pet stays healthy and happy.
+
+Grooming is an essential part of pet care, including brushing their fur, cleaning their ears and eyes, and trimming their nails. A clean and comfortable living space is also vital, including a warm and cozy place to sleep.
+
+Providing mental stimulation and socialization is also important, including playtime, training, and socialization with other pets and people. Showing your pet love, attention, and affection is also essential, including cuddles, praise, and rewards for good behavior.
+
+By following these simple tips, you can help ensure your pet leads a happy and healthy life. Remember, pets are part of the family, and they rely on us for their care and well-being.
+
+Some other important aspects of pet care include:
+
+<h2>Providing appropriate toys and chews to keep your pet entertained and stimulated.</h2> 
+<p>When it comes to pet care, providing the right toys and chews is essential. Pets need stimulation and engagement to stay happy and healthy. Toys and chews help meet their natural needs, keeping them occupied and entertained.
+
+	To choose the best toys and chews, consider your pet's unique needs and preferences. Look for durable, safe options that cater to their age, size, and breed. A varied selection is key, including different textures, colors, and interactive options.
+	
+	Toys and chews offer numerous benefits, including:
+	
+	. Mental stimulation and challenge
+	. Physical activity and exercise
+	. Healthy dental habits
+	. Stress relief and relaxation
+	
+	Regularly rotating toys keeps things fresh and exciting for your pet. Some great options include:
+	
+	. Long-lasting rubber toys
+	. Healthy rawhide chews
+	. Soft plush toys
+	. Engaging puzzle toys
+	. Rewarding treat-dispensing toys
+	
+	By providing a thoughtful selection of toys and chews, you can help your pet thrive and enjoy a happy, healthy life.</p>
+
+	<h2>Keeping your pet up to date on vaccinations and preventatives, such as heartworm medication</h2> 
+<p>Protecting your pet's health is a top priority. Vaccinations and preventatives like heartworm medication play a crucial role in maintaining their well-being. Staying current on these essential measures ensures your pet is shielded from harmful diseases and parasites.
+
+	Regular vaccinations and preventatives offer peace of mind, knowing your pet is:
+	
+	. Safeguarded against serious diseases.
+	. Protected from parasite infestations.
+	. Equipped with a strong immune system.
+	. Less likely to transmit diseases.
+	. Enjoying optimal health and well-being.
+	
+	Your veterinarian will guide you on the best schedule for your pet's vaccinations and preventatives, tailored to their individual needs and lifestyle. By staying on track, you're investing in your pet's long-term health and happiness.</p>
+<h2>Providing regular dental care, including brushing your pet's teeth and providing dental chews</h2>
+<p>Your pet's dental health is a vital aspect of their overall wellness. Regular care helps prevent oral issues, promotes healthy teeth and gums, and supports their overall health.
+
+	By prioritizing dental care, you can:
+	
+	. Maintain healthy teeth and gums.
+	. Prevent oral health problems.
+	. Support overall health and wellness.
+	. Enhance their quality of life.
+	. Demonstrate love and care through regular attention.
+	
+	Consult your veterinarian for personalized guidance on dental care for your pet. Together, you can help your pet enjoy optimal oral health and a happy life.</p>
+<h2> Creating a safe and secure living space, including preventing escape and injury</h2>
+<p>Your pet's well-being depends on a safe and secure environment. By taking proactive measures, you can create a comfortable and protected space for your furry friend to thrive.
+
+	Consider the following essential steps to ensure your pet's safety:
+	
+	. Secure your yard with durable fencing.
+	. Store harmful substances out of reach.
+	. Provide a sturdy and cozy shelter.
+	. Regulate temperature and humidity levels.
+	. Install advanced safety features like smart sensors and alert systems.
+	
+	By prioritizing your pet's safety, you can enjoy peace of mind knowing they are protected and happy in their living space. Your veterinarian can offer expert guidance on creating a tailored, safe haven for your pet.</p>
+	</p>
+<script src="search box.js"></script>
+</main>
+
+	<div class="comments-container">
+		<div class="comment-box">
+		  <img src="Sean Perker.jpg" alt="Person 1">
+		  <h3>Sean Perker</h3>
+		  <p>"The team at Care Critters Pros went above and beyond to help my elderly dog, Rocky,
+			 feel comfortable and relaxed during his stay." - Sean Perker, dog owner
+			.</p>
+		</div>
+		<div class="comment-box">
+		  <img src="william john.jpg" alt="Person 2">
+		  <h3>Willaim John</h3>
+		  <p> "Care Critters took great care of my cat, Whiskers, while I was away on vacation.
+				I highly recommend their pet sitting services!" - John, cat owner
+		</p>
+		</div>
+		<div class="comment-box">
+		  <img src="hella.jpg" alt="Person 3">
+		  <h3>Hella </h3>
+		  <p> "I'm so grateful for Pet Care Pros! Their team is knowledgeable, friendly, and 
+			truly cares about my furry friend's well-being.The team at Care Critters is trustworthy, reliable,
+			 and passionate about pet care. I highly recommend their services!"- Hella dog owner
+			.</p>
+		</div>
+		
+	  </div>
+	
+<!-- Bottom Bar -->
+<div class="bottom-bar">
+	<div class="container">
+		<img src="animal logo.webp" alt="Image" class="container-img">
+	  <p>The Animal Foundation at 655 N. Mojave Road in Las Vegas<br> is conveniently located off US-95 and Eastern. The Animal<br> Foundation is a nonprofit 501(c)(3) organization. All donations<br> are tax deductible in full or in part. Tax ID: 88-0144253.<br><br>@ Care Critters Website 2024 | Designed by KRB.</p>
+	 <p>Contact us:<br><br>www.care critters.com<br><br>CareCritters@gmail.com</p>
+	</div>
+  </div>
+  
+
+
+
+	
+	<footer>
+		<p>Copyright © 2023 Care Critters. All rights reserved.</p>
+	</footer>
+</body>
+</html>
